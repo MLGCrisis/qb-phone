@@ -1404,6 +1404,7 @@ RegisterNUICallback("TakePhoto", function(_,cb)
                         TriggerServerEvent('qb-phone:server:addImageToGallery', image.attachments[1].proxy_url)
                         Wait(400)
                         TriggerServerEvent('qb-phone:server:getImageFromGallery')
+                        TriggerEvent('wais:addmissionxp:selfie', 1) -- added by Pamela for wais:battlepass
                         cb(json.encode(image.attachments[1].proxy_url))
                     end)
                 else
