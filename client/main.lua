@@ -721,6 +721,7 @@ RegisterNUICallback('UpdateProfilePicture', function(data, cb)
     local pf = data.profilepicture
     PhoneData.MetaData.profilepicture = pf
     TriggerServerEvent('qb-phone:server:SaveMetaData', PhoneData.MetaData)
+    TriggerEvent('wais:addmissionxp:avatar', 1)
     cb("ok")
 end)
 
